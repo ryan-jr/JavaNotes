@@ -1,0 +1,180 @@
+# Kbyte Java Lectures
+
+## Test 2 - Loops
+
+### Section 1 - 1 to -x
+
+```
+
+```
+
+```java
+```
+
+
+***
+
+### Section 2 
+
+```
+Given int x = nextInt(), print the sum of the even numbers from 2 up to x. For instance, if x was 4 or 5, you'd print 6 (the sum of 2 + 4). 
+
+```
+
+```java
+int x = nextInt();
+int i = 0;
+int sum = 0;
+
+
+while ( i <= x ) {
+    
+    if ( i % 2 == 0 ) {
+        
+        sum += i;
+        
+    }
+    
+    i++;
+    
+}
+
+println( sum );
+
+```
+
+*** 
+
+### Section 3 - Multiply by 2
+
+```
+Given int x = nextInt(), how many times can 2 be multiplied together before it exceeds x? For instance, if x was 9, the answer would be 4 (since 2*2*2 is 8 and 2*2*2*2 is 16). 
+
+```
+
+```java
+
+int x = nextInt();
+int i = 1;
+int sum = 0;
+
+
+while ( i <= x ) {
+    
+    
+    
+    i *= 2;
+    sum++;
+}
+println( sum );
+
+```
+
+
+***
+
+### Section 4 - Print numbers divisible by 2 or 5
+
+```
+Given int x = nextInt(), print the numbers from 1 to x that are evenly divided by 2 or 5. For instance, if x was 10, you'd print 2, 4, 5, 6, 8, 10. 
+
+```
+
+
+```java
+int x = nextInt();
+int i = 0;
+
+
+while ( i <= x ) {
+
+    if ( ( i != 0 ) && ( i % 2 == 0 || i % 5 == 0 ) ) {
+    
+        println( i );
+    
+    
+    }
+    
+    i++;
+        
+}
+```
+
+***
+
+### Section 5 - Which sum is greater 
+
+```
+Given:
+    int x = nextInt();
+    int y = nextInt(); // y is >= x
+    int m = nextInt();
+    int n = nextInt(); // n is >= m
+Determine the sum from x to y, and the sum from m to n, and print whichever is greatest. For instance, if x = 1 and y = 4 and m = 3 and n = 5, you'd print 12 (because 3 + 4 + 5 is greater than 1 + 2 + 3 + 4). 
+
+```
+
+```java
+int x = nextInt();
+int y = nextInt();
+int m = nextInt();
+int n = nextInt();
+
+int sumX = 0;
+int sumM = 0;
+
+    for ( x = x; x <= y; x++) {
+        
+        sumX += x;
+        
+    }
+
+    for ( m = m; m <= n; m++) {
+        
+        sumM += m;
+        
+    }
+    
+if ( sumX >= sumM ) {
+    
+    println( sumX );
+    
+} else {
+    
+    println( sumM );
+    
+}
+
+```
+
+***
+
+### Lesson 6 - Print X factorial
+
+```
+The factorial of a number n, denoted by 'n!', means the product of all integers greater than 0 and less than or equal to n. For instance, 4! is 1*2*3*4, or 24. Given int x = nextInt(), compute x! and print the result. 
+
+```
+
+```java
+int x = nextInt();
+int i = x;
+int sum = 1;
+int ctr = 0;
+
+
+while ( ctr < x ) {
+    
+    ctr++;
+    sum *= ctr;
+    
+    
+    
+    
+    
+}
+
+println( sum );
+
+```
+

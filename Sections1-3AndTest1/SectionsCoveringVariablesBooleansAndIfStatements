@@ -1,0 +1,960 @@
+# Kbyte Java Course
+
+### Lesson 5
+
+* Java is statically typed 
+* Java also has ints, floats, and doubles, double is a 64 bit number (more precision), float is a 32 bit number.  
+
+```Java
+
+// commenting code for double operation
+
+double x = nextDouble();
+println( x - 5 );
+
+```
+
+***
+
+### Lesson 6 - Integer Division
+
+* Java rounds down in integer division remainders.  
+
+* More precisely the decimal is thrown away, because 39/10 results in 3, but -39/10 results in -3 (not -4 as you would expect w/ rounding down).  
+
+```Java
+
+int x = nextInt();
+println( x/2 );
+
+```
+
+***
+
+### Lesson 7 - casting numbers
+
+* To convert between variable types  you do (TYPEYOUWANT)VALUE 
+
+```java
+
+// (int)4.2 converts 4.2 to the int 4
+// (int) called a type cast to int
+// (double)4 convert 4 to 4.0
+
+// (int)(3.0 + 4.0);
+// operator precedence says we do conversions first and THEN do addition, so in order to do math we need to convert the whole equation.  
+
+double x = nextDouble();
+println( (int)x );
+
+```
+***
+
+### Lesson 8 - The char variable type
+
+* char is characters (strings), not numeric/double/float, etc...
+
+```Java
+
+// commenting code for char conversion
+
+int x = nextInt();
+
+println( (char)x );
+
+```
+
+***
+
+### Lesson 9 - Modulo operator 
+
+```java
+
+// commenting code for the modulo operator
+
+int x = nextInt();
+println( x%5 );
+
+```
+
+### Lesson 10 - ROT 1
+
+
+
+
+```java
+
+char x  = nextChar();
+int num = (int)x + 1;
+println( (char)num );
+
+
+
+char x = nextChar();
+int num = (int)x;
+num = num - 'a';
+num = num + 1;  //z, 25+1 -> 0
+num = num % 26;
+num = num + 'a';
+x = (char)num;
+println(x);
+
+// println((char)(((int)x-'a'+1)%26 + 'a'));
+// the above oneliner is the same as everything above
+```
+
+### Section 2 Lesson 1 - Boolean Variable
+
+```java
+
+// commenting code for boolean variables
+// we can store booleans as either true or false
+// another example would be boolean x = true;
+// or boolean x = false;
+
+
+boolean x = nextBoolean();
+println(x);
+
+
+
+```
+
+*** 
+
+### Section 2 Lesson 2 - Greater Than, Less Than
+
+* Greater than/Less than will return boolean values
+
+```java
+
+// commenting code for boolean expressions
+
+int x = nextInt();
+int y = nextInt();
+
+println( x > y );
+```
+
+***
+
+### Section 2 Lesson 3 - GTE, LTE
+
+* GTE and LTE, like LT, and GT uses 2 numbers to return a boolean
+
+```java
+
+// commenting code for Greater Than Equal To/Less Than Equal To
+
+int x = nextInt();
+int y = nextInt();
+
+println( x <= y );
+
+```
+
+*** 
+
+### Section 2 Lesson 4 - Not Operator
+
+
+```java
+
+// commenting code for the not operator
+
+boolean x = nextBoolean();
+
+println( !x );
+
+```
+
+### Section 2 Lesson 5 - And Operator
+
+* && (AND), takes two arguments that are both booleans
+
+* examples: 
+* println( 5 > 2 && 5 < 2 )
+
+*  println( 5 > 2 && 5 < 3 && 3 > 2 && 10 > 5);
+
+
+* returns TRUE if BOTH sides are TRUE
+
+```java
+
+// commenting code for the AND operator
+
+int x = nextInt();
+int y = nextInt();
+
+println( x > 5 && y > 5 );
+
+```
+
+***
+
+### Section 2 Lesson 6 - Or operator
+
+* Similar to the AND operator 
+
+* Or is represented as || 
+
+* like AND takes 2 booleans and returns a boolean, and only requires EITHER side to be true in order to return true
+
+```java
+
+// commenting code for the OR operator 
+
+int x = nextInt();
+int y = nextInt();
+
+println( x > 5 || y > 5 );
+
+```
+
+*** 
+
+### Section 2 Lesson 7 - Operator precdence with parenthesis
+
+* && runs before ||
+
+* so in the following instance the left side of the equation would run, and then the right side of the equation would run
+
+*   x > 5 && y > 3 || x > 2 && y > 10
+
+
+
+```java
+
+// commenting for operator precedence and parenthesis
+
+int x = nextInt();
+int y = nextInt();
+println( (x < 3 || x > 7) && (y < 3 || y > 7) );
+
+
+
+```
+
+### Section 2 Lesson 8 - the equality operator
+
+```java
+
+// commenting for the equality operator
+
+int x = nextInt();
+int y = nextInt();
+
+println ( x == y );
+
+```
+
+***
+
+### Secion 2 Lesson 9 - the not equality operator
+
+```java
+// commenting for the not equality operator
+
+int x = nextInt();
+int y = nextInt();
+
+println ( x != y );
+```
+
+
+### Section 2 Lesson 10 -  The Unhappy Cat
+
+```
+
+boolean food = nextBoolean();
+boolean water = nextBoolean();
+boolean bed = nextBoolean();
+println( !(food&&water&&bed) );
+
+// we print out the above because we want to find when the cat is UNHAPPY, i.e. NOT HAPPY.  
+
+```
+
+### Section 3 Lesson 1 - Boolean Review
+
+```java
+
+// commenting code for boolean review
+
+int x = nextInt();
+int y = nextInt();
+println((x >= 4 && x <= 6) || (y >= 4 && y <= 6));
+
+```
+
+***
+
+### Section 3 Lesson 2 - If statement smaller value
+
+```java
+
+// commenting code for if statements
+
+int x = nextInt();
+int y = nextInt();
+
+if( x < y ) {
+    
+    println(x);
+    
+} else {
+    
+    println(y);
+    
+}
+```
+
+
+***
+
+### Section 3 Lesson 3 - If statement divisibility test
+
+``` java
+// commenting code for divisibility test
+
+int x = nextInt();
+int y = nextInt();
+
+if ( x%y == 0 ) {
+    
+    println(true);
+    
+    
+} else {
+    
+    println(false);
+    
+}
+```
+
+***
+
+### Section 3 Lesson 4 - If statement two sort
+
+```
+
+// commenting code for two sort
+
+int x = nextInt();
+int y = nextInt();
+
+if( x < y ) {
+    
+    println(x);
+    println(y);
+    
+} else {
+    
+    println(y);
+    println(x);
+    
+}
+
+```
+
+### Section 3 Lesson 5
+
+
+```
+
+// commenting code for nesting if statements
+
+int x = nextInt();
+int y = nextInt();
+int z = nextInt();
+
+if ( (x > y) && (x > z) ) {
+    
+    println( "x is biggest" );
+    
+
+    }
+    
+else if ( y > z ) {
+        
+        println( "y is pretty big" );
+        
+    } else {
+        
+        println( "z is pretty big" );
+    
+```
+
+***
+
+### Section 2 Lesson 6 - More Using multiple Ifs
+
+```java
+
+// commenting code for using multiple ifs 
+
+
+int x = nextInt();
+int y = nextInt();
+int z = nextInt();
+int mass = 0;
+
+
+if ( x % 2 == 0 ) {
+    
+    mass = x + y + z;
+    
+    
+} else {
+    
+    mass = x *y * z;
+    
+}
+
+if ( y % 2 == 0 ) {
+    
+    mass = mass * 2;
+    
+}
+
+println(mass);
+
+```
+
+***
+
+### Section 3 Lesson 7 - Odd number out 
+
+```java
+
+// commenting code for finding the different number
+
+int x = nextInt();
+int y = nextInt();
+int z = nextInt();
+
+
+if ( (x!=y) && (x!=z) ) {
+    
+    println( "x is weird" );
+    
+} else if ( (y!=x) && (y!=z) ) {
+    
+    println( "y is weird" );
+    
+}  else {
+    
+    println( "z is weird" );
+    
+}
+
+```
+
+*** 
+
+### Section 3 Lesson 8 - Finding double a number
+
+```java
+
+// commenting code for finding double a number
+
+int x = nextInt();
+int y = nextInt();
+int z = nextInt();
+
+if ( (x == 2 * y) || (x == 2 * z) ) {
+    
+    println(x);
+    
+} else if ( ( y == 2 * x || y == 2 * z ) ) {
+    
+    println(y);
+    
+    
+} else if ( ( z == 2 * x || z == 2 * y ) ) {
+    
+    println(z);
+    
+} else {
+    
+    println( "none" );
+    
+}
+
+```
+
+### Section 3 Lesson 9 - Rock Paper Scissors
+
+```
+
+// commenting code for rock paper scissors
+
+char x = nextChar();
+
+
+if ( x == 'r' ) {
+    
+    println( "p" );
+    
+    
+} else if ( x == 'p' ) {
+    
+    println( "s" );
+    
+} else {
+    
+    println( "r" );
+    
+}
+
+```
+
+### Section 3 Lesson 10 - Vowel check 
+
+
+```
+
+// commenting for vowel check
+
+char x = nextChar();
+
+if ( x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' ) {
+    
+    println( "vowel" );
+    
+} else {
+    
+    println( "consonant" );
+    
+}
+
+```
+
+### Test 1 Section 1 - Muffin Basket Weight 
+
+```java
+
+/*
+You have a basket full of muffins. The empty basket weighs float basket = nextFloat(); pounds, while each muffin weighs float muffin = nextFloat(); pounds. The basket contains int number = nextInt(); muffins. Print the combined weight of the basket and the muffins. 
+*/
+
+// commenting for test 1
+
+float basket = nextFloat();
+float muffin = nextFloat();
+int   number = nextInt();
+
+println( basket + ( muffin * number ) );
+
+```
+
+***
+
+### Test 1 Section 2 - Salary
+
+```java
+/*
+You have a job that pays double d = nextDouble(); dollars each day that you work. If you work int n = nextInt(); days a week for int w = nextInt(); weeks, how much money (in dollars) do you earn in total? 
+*/
+
+// commenting for salary
+
+double d = nextDouble();
+int n = nextInt();
+int w = nextInt();
+
+println( d * n * w );
+```
+
+***
+
+### Test 1 Section 3 - Sale
+
+```java
+
+
+
+
+
+
+```
+
+### Test 1 Section 4 - Test Average
+
+```java
+
+double a = nextDouble();
+double b = nextDouble();
+
+println( (a + b) / 2 );
+
+```
+
+***
+
+### Test 1 Section 5 - Timer Minutes
+
+```java
+
+*/
+double a = nextDouble();
+double b = nextDouble();
+
+println( (a + b) / 2 );
+/*
+
+int d = nextInt();
+
+println( d * 1440 );
+
+```
+
+***
+
+### Test 1 Section 6 - Find Remainder
+
+```java
+
+int num     = nextInt();
+int divisor = nextInt();
+
+int remainder = num % divisor;
+
+println( remainder );
+
+```
+
+### Test 1 Section 7 - Snow Chance 
+
+
+```java
+
+boolean raining = nextBoolean();
+boolean cold    = nextBoolean();
+
+if ( raining && cold ) {
+    
+ println( true );  
+    
+} else {
+    
+    println( false );
+    
+}
+
+```
+
+### Test 1 Section 8 - Jacket
+
+```java
+
+boolean raining = nextBoolean();
+boolean cold    = nextBoolean();
+
+if ( raining || cold ) {
+    
+    println( true );
+    
+} else {
+    
+    println( false );
+    
+}
+```
+***
+
+### Test 1 Section 9 - Seeing the Sun
+
+```java
+
+int hour       = nextInt();
+boolean cloudy = nextBoolean();
+
+if ( hour >= 6 && cloudy != true ) {
+    
+    println( true );
+    
+} else {
+    
+    println( false );
+    
+}
+```
+
+
+***
+
+### Test 1 Section 10 - Theatre Discounts
+
+```java
+
+int j   = nextInt();
+int s   = nextInt();
+int age = nextInt();
+
+if ( age >= s ) {
+    
+    println( true );
+    
+} else if ( age <= j ) {
+    
+    println( true );
+    
+} else {
+    
+    println( false );
+    
+}
+```
+
+### Test 1 Section 11 - Invert Boolean 
+
+```java
+
+boolean a = nextBoolean();
+
+println ( !a );
+
+
+
+```
+
+### Test 1 Section 12 - Not Zipcode
+
+```java
+
+int number  = nextInt();
+int zipcode = nextInt();
+
+if ( number != zipcode ) {
+    
+    println( true ); 
+    
+} else {
+    
+    println( false );
+    
+}
+```
+
+
+### Test 1 Section 13 - Heating food
+
+```java
+
+int x = nextInt();
+int y = nextInt();
+int min = nextInt();
+
+if ( (min < x) && (min > y) ) {
+    
+    println( false );
+    
+} else {
+    
+    println( true );
+    
+}
+```
+
+### Test 1 Section 14 - IsTriangle
+
+```java
+
+
+float a = nextFloat();
+float b = nextFloat();
+float c = nextFloat();
+
+if ( a >= b+c ) {
+    
+    println( false );
+    
+    
+} else if ( b >= a+c ) {
+    
+    println( false );
+    
+} else if ( c >= a+b ) {
+    
+    println( false );
+    
+} else {
+    
+    println( true );
+    
+}
+
+
+```
+
+***
+
+### Test 1 Section 15 - Gummi Bears
+
+```
+You have int g = nextInt() gummy bears to be divided evenly among int p = nextInt() people. Print whether it is possible to do this without any gummy bears left over (or splitting a bear). 
+```
+
+
+```java
+
+int g = nextInt();
+int p = nextInt();
+
+if( g % p == 0 ) {
+    
+    println( true );
+    
+} else {
+    
+    println( false );
+    
+}
+```
+
+
+
+
+***
+
+### Test 1 Section 16 - Watermellon
+
+```
+A watermelon is pushed from a shelf int a = nextInt() feet tall to another shelf int b = nextInt() feet tall. The watermelon will break if it falls more than int f = nextInt() feet. Print whether the watermelon breaks or not. 
+
+```
+
+```java
+
+int a = nextInt();
+int b = nextInt();
+int f = nextInt();
+
+if( a - b > f ) {
+    
+    println( true );
+    
+} else {
+    
+    println( false );
+    
+}
+```
+
+***
+
+### Test 1 Section 17 - Ice Cream Cost
+
+```
+You are buying ice cream. The ice cream costs 2 dollars. It costs another dollar if you buy it with a cone, and an additional dollar if the cone is a waffle cone. boolean cone = nextBoolean() is equal to whether a cone is bought or not, and boolean waffle nextBoolean() is equal to if you order a waffle cone. (Note that if you order a waffle cone without buying a cone first, it will not be counted!) Print the price you pay for the ice cream. 
+```
+
+```java
+
+boolean cone   = nextBoolean();
+boolean waffle = nextBoolean();
+int     cream  = 2;
+
+if ( cone == true && waffle == true ) {
+    
+    println( cream + 2 );
+    
+    
+    
+} else if ( cone == false ) {
+    
+    println ( 2 );
+    
+} else if ( cone == true || waffle == true ) {
+    
+    println( cream + 1 );
+    
+} else {
+    
+    println( 2 );
+    
+}
+
+
+```
+
+***
+
+### Test 1 Section 18 - Dog bones
+
+```
+Print the maximum number of dogs you can give bones if each dog needs a set number of bones and you have int b = nextInt() bones. If boolean two = nextInt() is true, each dog will need two bones. Otherwise, they will each need three. 
+
+```
+
+
+```java
+
+int b = nextInt();
+boolean two = nextBoolean();
+
+if ( two == true ) {
+    
+    println ( b / 2 );
+    
+} else {
+    
+    println ( b / 3 );
+    
+}
+
+```
+
+***
+
+### Test 1 Section 19 - Increase or decrease
+
+```
+You are given int num = nextInt(), as well as boolean increase = nextBoolean(). If increase is true, print num + 1. Otherwise, print num-1. 
+
+```
+
+```java
+int num = nextInt();
+boolean increase = nextBoolean();
+
+if ( increase == true ) {
+    
+    println( num + 1 );
+    
+} else {
+    
+    println( num - 1 );
+    
+}
+```
+
+
+### Test 1 Section 20 - Starcraft
+
+```
+In a game of Starcraft, the player with more supply is generally more likely to win. Player a has a supply of int a = nextInt() and Player b has a supply of int b = nextInt(). Print the player has a higher chance of winning the game ('a' or 'b'). If they have the same supply, print 'c'. 
+
+```
+
+```java
+
+int a = nextInt();
+int b = nextInt();
+
+if ( a > b ) {
+    
+    println( "a" );
+    
+} else if ( b > a ) {
+    
+    println( "b" );
+    
+} else {
+    
+    println( "c" );
+    
+}
+```

@@ -1,0 +1,323 @@
+# KByte Java Lectures
+
+## Section 4 More While Loops
+
+### Lesson 1 - Sum of 1 to 10
+
+```
+Write a while loop that outputs the sum of the numbers from 1 to 10 
+```
+
+```java
+
+int sum = 0;
+int i = 0;
+
+while ( i < 10 ) {
+    
+    i++;
+    sum = sum + i;
+    
+    
+}
+println( sum );
+```
+
+### Lesson 2 - Sum from 50 to 100 
+
+```
+Write a loop that outputs the sum of the numbers from 50 to 100
+```
+
+```java
+
+int i = 50;
+int sum = 50;
+
+while ( i < 100 ) {
+    
+    i++;
+    sum = sum + i;
+    
+    
+}
+println ( sum );
+
+    
+}
+
+```
+
+***
+
+### Lesson 3  - multiples of 3 and 5
+
+```
+Write a program using the while loop that prints multiple of 3 or 5 between 1 and 1000 
+```
+
+```java
+
+int i = 1;
+
+while ( i <= 1000 ) {
+    
+    if ( i % 3 == 0 || i % 5 == 0 ) {
+        
+        println( i );
+        
+    }
+    
+    i++;
+    
+}
+
+
+
+```
+
+***
+
+### Lesson 4 - 3 and 5 
+
+```
+Write a program using the while loop that prints multiple of *both* 3 and 5 between 1 and 1000 
+```
+
+```java
+
+int i = 0;
+
+while ( i <= 1000 ) {
+    
+    i++;
+    
+    if ( i % 3 == 0 && i % 5 == 0 ) {
+        
+        println( i );
+        
+    }
+    
+    
+    
+}
+
+```
+
+*** 
+
+### Lesson 5 - Sums of multiples
+
+```
+Write an algorithm that uses the while loop to sum the multiples of 3 or 5 that are between int a = nextInt(); and int b = nextInt(); 
+
+```
+
+```java
+
+int a = nextInt();
+int b = nextInt();
+int sum = 0;
+int i = a;
+while( i <= b ) {
+    if( i % 3 == 0  || i % 5 == 0) {
+        sum += i;
+    }
+    i++;
+}
+println(sum);
+
+```
+
+***
+
+### Lesson 6 - Multiplication table 
+
+```
+Using the while loop make the multiplications table from 1 to 5. First print "1*1=1" then print "1*2=2" all the way up to "1*5=5", then print "2*1=2", "2*2=4", all the way up to "2*5=10". continue up to "5*5=25" 
+
+
+```
+
+```java
+
+int x = 1;
+int z = 0;
+
+while ( z <= 5) {
+    
+    
+    
+    
+    while ( x <= 5) {
+        
+        
+        int y = 1;
+        
+        while ( y <= 5 ) {
+            
+            print( x );
+            print( "*" );
+            print( y );
+            print( "=" );
+            print( x * y);
+            println( "" );
+            y++;
+        }
+        
+        x++;
+        
+    }
+
+    
+    
+    z++;
+}
+
+
+```
+
+***
+
+### Lesson 7 - Multiplication Table by 2s
+
+```
+
+```
+
+```java
+int x = 2;
+int z = 0;
+
+while ( z <= 10) {
+    
+    
+    
+    
+    while ( x <= 10) {
+        
+        
+        int y = 2;
+        
+        while ( y <= 10 ) {
+            
+            print( x );
+            print( "*" );
+            print( y );
+            print( "=" );
+            print( x * y);
+            println( "" );
+            y += 2;
+        }
+        
+        x += 2;
+        
+    }
+
+    
+    
+    z++;
+}
+```
+
+*** 
+
+### Lesson 8 - Reduced Multiplication table
+
+```
+Using the while loop make the multiplications table from 1 to 5, but only print cases where the second number is greater than or equal to the first number. First print "1*1=1" then print "1*2=2" all the way up to "1*5=5", then print "2*2=2" (not 2*1=2) all the way up to "2*5=10". continue up to "5*5=25" 
+```
+
+```java
+
+
+int i = 1;
+while ( i <= 5 ) {
+    
+    int j = i;
+    
+    while ( j <= 5 ) {
+        
+        println( i + "*" + j + "=" + ( i * j ) );
+        
+        j++;
+    }
+    
+    i++;
+}
+
+```
+
+***
+
+### Lesson 9 - What sums to 55
+
+```
+Write a program that determines what numbers from 1 to x sum to 55. Print the x. 
+
+
+```
+
+```java
+int sum = 0;
+int solution = 0;
+int i = 1;
+
+while( sum != 55 ) {
+    
+    sum += i;
+    if( sum == 55 ) {
+        
+        solution = i;
+        
+    }
+    
+    i++;
+}
+
+println(solution);
+
+
+```
+
+
+***
+
+### Lesson 10 -  What sums to n?
+
+```
+Write a program that determines what numbers from 1 to x sum to int n = nextInt() 
+
+```
+
+```java
+
+int sum = 0;
+int n = nextInt();
+int i = 1;
+int solution = 0;
+
+while( sum != n ) {
+    
+    sum += i;
+    
+    if( sum == n ) {
+        
+        solution = i;
+        
+    }
+    
+    i++;
+}
+
+println( solution );
+
+
+```
+
+
+
+
+
+
+
